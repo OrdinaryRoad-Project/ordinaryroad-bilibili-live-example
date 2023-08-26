@@ -28,9 +28,14 @@ public class LiveChatClientController {
         client.getConfig().setAutoReconnect(autoReconnect);
     }
 
-    @GetMapping("disconnect")
-    public void disconnect() {
-        client.disconnect();
+    @GetMapping("roomId/{roomId}")
+    public void roomId(@PathVariable Long roomId) {
+        client.getConfig().setRoomId(roomId);
+    }
+
+    @GetMapping("disconnect/{cancelReconnect}")
+    public void disconnect(@PathVariable Boolean cancelReconnect) {
+        client.disconnect(cancelReconnect);
     }
 
 }

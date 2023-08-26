@@ -3,6 +3,7 @@ package tech.ordinaryroad.bilibili.live.config;
 import com.fasterxml.jackson.databind.JsonNode;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import tech.ordinaryroad.bilibili.live.constant.CmdEnum;
 import tech.ordinaryroad.bilibili.live.listener.IBilibiliSendSmsReplyMsgListener;
 import tech.ordinaryroad.bilibili.live.msg.SendSmsReplyMsg;
 
@@ -25,4 +26,13 @@ public class BilibiliSendSmsReplyMsgListener implements IBilibiliSendSmsReplyMsg
         log.info("收到弹幕 {}({})：{}", uname, uid, danmuText);
     }
 
+    @Override
+    public void onOtherSendSmsReplyMsg(CmdEnum cmd, SendSmsReplyMsg msg) {
+        log.info("收到其他消息 {} {}", cmd, msg);
+    }
+
+    @Override
+    public void onUnknownCmd(String cmdString, SendSmsReplyMsg msg) {
+        log.warn("未知cmd: {} {}", cmdString, msg);
+    }
 }
