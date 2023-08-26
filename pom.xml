@@ -35,14 +35,14 @@
 
     <groupId>tech.ordinaryroad.bilibili.live</groupId>
     <artifactId>ordinaryroad-bilibili-live-example</artifactId>
-    <version>0.0.6</version>
+    <version>0.0.7</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <ordinaryroad-bilibili-live.version>0.0.6</ordinaryroad-bilibili-live.version>
+        <ordinaryroad-bilibili-live.version>0.0.7</ordinaryroad-bilibili-live.version>
     </properties>
 
     <dependencyManagement>
