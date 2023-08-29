@@ -34,3 +34,8 @@ tech:
 >
 > 启用自动重新连接
 > http://localhost:8080/client/autoReconnect/true
+
+## 支持同时监听多个直播间
+
+> http://localhost:8080/client/multiply/newClientAndStart/7777
+> http://localhost:8080/client/multiply/newClientAndStart/6
