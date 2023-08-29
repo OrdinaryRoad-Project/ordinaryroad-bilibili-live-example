@@ -14,17 +14,17 @@ import tech.ordinaryroad.bilibili.live.netty.handler.BilibiliConnectionHandler;
 public class BilibiliConnectionListener implements IBilibiliConnectionListener {
 
     @Override
-    public void onConnected() {
-        log.info("onConnected");
+    public void onConnected(BilibiliConnectionHandler connectionHandler) {
+        log.info("{} onConnected", connectionHandler.getRoomId());
     }
 
     @Override
     public void onConnectFailed(BilibiliConnectionHandler connectionHandler) {
-        log.info("onConnectFailed");
+        log.info("{} onConnectFailed", connectionHandler.getRoomId());
     }
 
     @Override
     public void onDisconnected(BilibiliConnectionHandler connectionHandler) {
-        log.info("onDisconnected");
+        log.info("{} onDisconnected", connectionHandler.getRoomId());
     }
 }
