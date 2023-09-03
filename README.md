@@ -1,4 +1,6 @@
-# ordinaryroad-bilibili-live-demo
+# ordinaryroad-bilibili-live-example
+
+## ⚠️⚠️⚠️ 项目已重构（API不变，v0.0.9为最后一个版本），已支持Bilibili、Douyu，传送门：[ordinaryroad-live-chat-client](https://github.com/OrdinaryRoad-Project/ordinaryroad-live-chat-client)，有问题欢迎[提交issuse](https://github.com/OrdinaryRoad-Project/ordinaryroad-live-chat-client/issues)，觉得有用的话可以点个小星星⭐️鼓励一下，感谢
 
 ## 1 配置
 

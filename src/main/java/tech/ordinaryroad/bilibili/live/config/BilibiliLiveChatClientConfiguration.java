@@ -3,9 +3,9 @@ package tech.ordinaryroad.bilibili.live.config;
 import jakarta.annotation.Resource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
-import tech.ordinaryroad.bilibili.live.client.BilibiliLiveChatClient;
-import tech.ordinaryroad.bilibili.live.listener.IBilibiliConnectionListener;
-import tech.ordinaryroad.bilibili.live.listener.IBilibiliSendSmsReplyMsgListener;
+import tech.ordinaryroad.live.chat.client.bilibili.client.BilibiliLiveChatClient;
+import tech.ordinaryroad.live.chat.client.bilibili.listener.IBilibiliConnectionListener;
+import tech.ordinaryroad.live.chat.client.bilibili.listener.IBilibiliSendSmsReplyMsgListener;
 
 /**
  * @author mjz

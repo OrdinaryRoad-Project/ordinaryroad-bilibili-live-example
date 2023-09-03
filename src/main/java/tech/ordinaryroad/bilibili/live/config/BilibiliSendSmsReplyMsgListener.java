@@ -3,10 +3,12 @@ package tech.ordinaryroad.bilibili.live.config;
 import com.fasterxml.jackson.databind.JsonNode;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import tech.ordinaryroad.bilibili.live.constant.CmdEnum;
-import tech.ordinaryroad.bilibili.live.listener.IBilibiliSendSmsReplyMsgListener;
-import tech.ordinaryroad.bilibili.live.msg.SendSmsReplyMsg;
-import tech.ordinaryroad.bilibili.live.netty.handler.BilibiliBinaryFrameHandler;
+import tech.ordinaryroad.live.chat.client.bilibili.constant.BilibiliCmdEnum;
+import tech.ordinaryroad.live.chat.client.bilibili.listener.IBilibiliSendSmsReplyMsgListener;
+import tech.ordinaryroad.live.chat.client.bilibili.msg.SendSmsReplyMsg;
+import tech.ordinaryroad.live.chat.client.bilibili.netty.handler.BilibiliBinaryFrameHandler;
+import tech.ordinaryroad.live.chat.client.commons.base.msg.BaseCmdMsg;
+import tech.ordinaryroad.live.chat.client.commons.base.msg.BaseMsg;
 
 /**
  * @author mjz
@@ -30,12 +32,12 @@ public class BilibiliSendSmsReplyMsgListener implements IBilibiliSendSmsReplyMsg
     }
 
     @Override
-    public void onOtherSendSmsReplyMsg(BilibiliBinaryFrameHandler binaryFrameHandler, CmdEnum cmd, SendSmsReplyMsg msg) {
-        log.info("{} 收到其他消息 {} {}", binaryFrameHandler.getRoomId(), cmd, msg);
+    public void onOtherCmdMsg(BilibiliBinaryFrameHandler binaryFrameHandler, BilibiliCmdEnum cmd, BaseCmdMsg<BilibiliCmdEnum> cmdMsg) {
+        log.info("{} 收到其他消息 {} {}", binaryFrameHandler.getRoomId(), cmd, cmdMsg);
     }
 
     @Override
-    public void onUnknownCmd(BilibiliBinaryFrameHandler binaryFrameHandler, String cmdString, SendSmsReplyMsg msg) {
+    public void onUnknownCmd(BilibiliBinaryFrameHandler binaryFrameHandler, String cmdString, BaseMsg msg) {
         log.warn("{} 未知cmd: {} {}", binaryFrameHandler.getRoomId(), cmdString, msg);
     }
 }

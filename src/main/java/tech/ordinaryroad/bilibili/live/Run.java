@@ -6,7 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.util.StopWatch;
-import tech.ordinaryroad.bilibili.live.client.BilibiliLiveChatClient;
+import tech.ordinaryroad.live.chat.client.bilibili.client.BilibiliLiveChatClient;
 
 /**
  * @author mjz

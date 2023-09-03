@@ -5,10 +5,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import tech.ordinaryroad.bilibili.live.client.BilibiliLiveChatClient;
-import tech.ordinaryroad.bilibili.live.config.BilibiliLiveChatClientConfig;
-import tech.ordinaryroad.bilibili.live.listener.IBilibiliConnectionListener;
-import tech.ordinaryroad.bilibili.live.listener.IBilibiliSendSmsReplyMsgListener;
+import tech.ordinaryroad.live.chat.client.bilibili.client.BilibiliLiveChatClient;
+import tech.ordinaryroad.live.chat.client.bilibili.config.BilibiliLiveChatClientConfig;
+import tech.ordinaryroad.live.chat.client.bilibili.listener.IBilibiliConnectionListener;
+import tech.ordinaryroad.live.chat.client.bilibili.listener.IBilibiliSendSmsReplyMsgListener;
 
 /**
  * @author mjz

@@ -2,8 +2,8 @@ package tech.ordinaryroad.bilibili.live.config;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import tech.ordinaryroad.bilibili.live.listener.IBilibiliConnectionListener;
-import tech.ordinaryroad.bilibili.live.netty.handler.BilibiliConnectionHandler;
+import tech.ordinaryroad.live.chat.client.bilibili.listener.IBilibiliConnectionListener;
+import tech.ordinaryroad.live.chat.client.bilibili.netty.handler.BilibiliConnectionHandler;
 
 /**
  * @author mjz
